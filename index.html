@@ -1,0 +1,39 @@
+<html ng-app="chrysaApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<div class="container" ng-controller="GemsController">
+	<h1>Gems in Angular</h1>
+
+	<ul ng-repeat="gem in gems" class="list-group">
+
+		<li class="list-group-item">
+			<a href="" ng-click="setGem($index)">
+			{{gem.name}}
+			</a> 
+			| 
+			<a href="" ng-click="editAGem($index)">Edit</a>
+			
+		</li>
+	</ul>
+
+	<div ng-include="previewGem"></div>
+
+	<div ng-include="editGem"></div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="js/controllers/app.js"></script>
+</body>
+</html>
